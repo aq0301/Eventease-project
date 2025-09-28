@@ -1,0 +1,13 @@
+{
+  "name": "EventEase - International Event Companion",
+  "short_name": "EventEase",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#1E40AF",
+  "theme_color": "#1E40AF",
+  "description": "Manage schedules, speakers, and live updates during events.",
+  "icons": [
+    { "src": "images/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "images/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

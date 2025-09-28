@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>EventEase - Agenda</title>
+
+  <!-- PWA manifest -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1E40AF">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="brand">
+      <img src="images/icon-192.png" alt="logo" class="logo">
+      <h1>EventEase</h1>
+    </div>
+    <nav class="navlinks">
+      <a href="index.html">Agenda</a>
+      <a href="directory.html">Speakers</a>
+      <a href="updates.html">Updates</a>
+    </nav>
+    <div class="right-controls">
+      <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h2>Welcome to EventEase</h2>
+      <p>Manage schedules, guests, and live updates during your events.</p>
+      <div class="hero-actions">
+        <a class="btn" href="index.html">View Agenda</a>
+        <a class="btn ghost" href="directory.html">Speakers</a>
+      </div>
+    </section>
+
+    <section class="quick-agenda">
+      <h3>Today’s Highlights</h3>
+      <div class="agenda-list">
+        <div class="session-card">
+          <h4>Opening Keynote</h4>
+          <p><strong>When:</strong> Day 1 — 10:00 AM</p>
+          <p><strong>Where:</strong> Hall A</p>
+        </div>
+        <div class="session-card">
+          <h4>Networking Lunch</h4>
+          <p><strong>When:</strong> Day 1 — 1:00 PM</p>
+          <p><strong>Where:</strong> Lounge</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Built for Abdul — GRO-ready event companion.</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+  <!-- register service worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('service-worker.js')
+        .then(reg => console.log('Service Worker registered:', reg.scope))
+        .catch(err => console.warn('SW register failed:', err));
+      });
+    }
+  </script>
+</body>
+</html>

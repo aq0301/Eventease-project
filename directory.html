@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>EventEase - Speakers</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="brand"><h1>EventEase</h1></div>
+    <nav class="navlinks">
+      <a href="index.html">Agenda</a>
+      <a href="directory.html">Speakers</a>
+      <a href="updates.html">Updates</a>
+    </nav>
+    <div class="right-controls">
+      <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>Speakers & Guests</h2>
+
+    <div class="grid" id="speaker-grid">
+      <div class="profile-card" data-name="John Doe" data-role="Keynote Speaker" data-bio="John leads AI research and speaks about automation and ethics.">
+        <img src="images/speaker-placeholder-1.png" alt="John Doe">
+        <h3>John Doe</h3>
+        <p>Keynote Speaker</p>
+        <button class="btn small" onclick="openModalFromCard(this)">View</button>
+      </div>
+
+      <div class="profile-card" data-name="Jane Smith" data-role="Workshop Lead" data-bio="Jane runs hands-on marketing workshops and case studies.">
+        <img src="images/speaker-placeholder-2.png" alt="Jane Smith">
+        <h3>Jane Smith</h3>
+        <p>Workshop Lead</p>
+        <button class="btn small" onclick="openModalFromCard(this)">View</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal -->
+  <div id="profile-modal" class="modal" onclick="if(event.target.id === 'profile-modal') closeModal()">
+    <div class="modal-inner">
+      <button class="close" onclick="closeModal()">×</button>
+      <img id="modal-photo" src="images/speaker-placeholder-1.png" alt="photo">
+      <h3 id="modal-name">Name</h3>
+      <p id="modal-role">Role</p>
+      <p id="modal-bio">Bio</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
